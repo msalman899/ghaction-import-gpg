@@ -6,6 +6,7 @@ runs:
   steps:
     - id: set-default-cache-ttl
       run: |
+        gpgconf --kill gpg-agent
         gpg-agent --daemon --default-cache-ttl 7200
       shell: bash
       name: set default cache ttl
